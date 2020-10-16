@@ -48,6 +48,9 @@ You are good to go!
         ```
     Note: To reset the `Current` Folder at any time, you may run this command again.
 
+## MinGW package version issue in Windows
+Your MinGW package version may be different. In this case, you should update the [`gcc.exe`](https://github.com/codeict/CP-VSCode-Setup/blob/d01a02a94c6ddf77f9160604b17bdbb3570eb4e9/.vscode/c_cpp_properties.json#L13), [`g++.exe`](https://github.com/codeict/CP-VSCode-Setup/blob/d01a02a94c6ddf77f9160604b17bdbb3570eb4e9/.vscode/tasks.json#L27) and [`gdb.exe`](https://github.com/codeict/CP-VSCode-Setup/blob/d01a02a94c6ddf77f9160604b17bdbb3570eb4e9/.vscode/launch.json#L30) locations in the `.vscode` configuration files.
+
 ## Usage
 1) You should write your code in the `Current` Folder.
 1) Press `F5` to run any `.cpp` file. The file will automatically take input from `input.txt` and write output to `output.txt`
