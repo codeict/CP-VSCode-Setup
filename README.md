@@ -1,6 +1,8 @@
 # CP-VSCode-Setup
 A Competitive Programming setup for C++ users in Windows and Ubuntu.
 
+[Setup Image](https://user-images.githubusercontent.com/37595244/96286373-2ef39500-0fd8-11eb-883e-363dea77a942.png)
+
 ## **Prerequisites**
 
 ### Windows
