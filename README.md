@@ -27,16 +27,21 @@ You are good to go!
 ## Installation
 1) Download this repository and extract folder `CP-VSCODE-SETUP`.
 2) Open VS Code. Click on `File->Open Folder->CP-VSCODE-SETUP`
-3) Open a Terminal by clicking on `Terminal->New Terminal` or press `Ctrl+Shift+\` `
+3) Open a Terminal by clicking on `Terminal->New Terminal` or press `Ctrl+Shift+` `
 4) You can always create a `Current` Folder from terminal by
     * Windows
     ```bash
     .\windows-reset.bat
     ```
     * Ubuntu
-    ```bash
-    ./ubuntu-reset.sh
-    ```
+        * Make the script executable
+        ```bash
+        chmod +x ubuntu-reset.sh
+        ```
+        * Execute the script
+        ```bash
+        ./ubuntu-reset.sh
+        ```
     Note: To reset the `Current` Folder at any time, you may run this command again.
 
 ## Usage
