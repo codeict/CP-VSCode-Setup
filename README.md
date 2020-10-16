@@ -1,18 +1,20 @@
 # CP-VSCode-Setup
 A Competitive Programming setup for C++ users in Windows and Ubuntu.
 
+__*Supports VSCode Debugging Features__.
+
 ![Setup Image](https://user-images.githubusercontent.com/37595244/96286373-2ef39500-0fd8-11eb-883e-363dea77a942.png)
 
 ## **Prerequisites**
 
 ### Windows
-1) Follow Steps 1-4 from [Official VS Code Windows Prerequisites](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites)
+1) Follow Steps 1-4 from [Official VSCode Windows Prerequisites](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites)
 2) [Check your MinGW installation](https://code.visualstudio.com/docs/cpp/config-mingw#_check-your-mingw-installation)
 
 You are good to go!
 
 ### Ubuntu
-1) Follow Steps 1-2 from [Official VS Code Linux Prerequisites](https://code.visualstudio.com/docs/cpp/config-linux#_prerequisites)
+1) Follow Steps 1-2 from [Official VSCode Linux Prerequisites](https://code.visualstudio.com/docs/cpp/config-linux#_prerequisites)
 2) Make sure g++ is installed
     * Install
     ```bash
@@ -28,7 +30,7 @@ You are good to go!
 
 ## Installation
 1) Download this repository and extract folder `CP-VSCODE-SETUP`.
-2) Open VS Code. Click on `File->Open Folder->CP-VSCODE-SETUP`
+2) Open VSCode. Click on `File->Open Folder->CP-VSCODE-SETUP`
 3) Open a Terminal by clicking on `Terminal->New Terminal` or press `Ctrl+Shift+` `
 4) You can always create a `Current` Folder from terminal by
     * Windows
