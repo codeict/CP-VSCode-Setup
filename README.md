@@ -1,7 +1,11 @@
 # CP-VSCode-Setup
 A Competitive Programming setup for C++ users in Windows and Ubuntu.
 
-__*Supports VSCode Debugging Features__.
+## **Features**
+1) Supports VSCode Debugging Features. Hover over variables to see values, print any object in Debug Console.
+1) Automatic input-output redirection to text files.
+1) Included script to reset all code files.
+1) Easy setup.
 
 ![Setup Image](https://user-images.githubusercontent.com/37595244/96286373-2ef39500-0fd8-11eb-883e-363dea77a942.png)
 
