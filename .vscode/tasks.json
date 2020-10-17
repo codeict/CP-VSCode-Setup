@@ -7,7 +7,7 @@
                 "-g",
                 "-Wshadow",
                 "-Wall",
-                "-O2",
+                // "-O2", This optimization causes errors while Debugging
                 "-Wno-unused-result",
                 "${file}",
                 "-o",
