@@ -1,5 +1,5 @@
 # CP-VSCode-Setup
-A Competitive Programming setup for C++ users in Windows and Ubuntu.
+A Competitive Programming setup using Visual Studio Code for C++ users in Windows and Ubuntu.
 
 ## **Features**
 1) Supports VSCode Debugging Features. Hover over variables to see values, print any object in Debug Console.
