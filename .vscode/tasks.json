@@ -3,16 +3,6 @@
         {
             "type": "shell",
             "label": "C/C++: g++ build active file",
-            "args": [
-                "-g",
-                "-Wshadow",
-                "-Wall",
-                // "-O2", This optimization causes errors while Debugging
-                "-Wno-unused-result",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -25,9 +15,37 @@
             },
             "windows": {
                 "command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+                "args": [
+                    "-pipe",
+                    // "-fsanitize=signed-integer-overflow,undefined", Causes compilation error in Windows
+                    "-g",
+                    "-march=native",
+                    // "-O2", This optimization causes errors while Debugging
+                    // "-std=c++17", Causes compilation error in Windows
+                    "-Wall",
+                    "-Wshadow",
+                    "-Wno-unused-result",
+                    "${file}",
+                    "-o",
+                    "${fileDirname}/${fileBasenameNoExtension}"
+                ]
             },
             "linux": {
                 "command": "/usr/bin/g++",
+                "args": [
+                    "-pipe",
+                    "-fsanitize=signed-integer-overflow,undefined",
+                    "-g",
+                    "-march=native",
+                    // "-O2", This optimization causes errors while Debugging
+                    "-std=c++17",
+                    "-Wall",
+                    "-Wshadow",
+                    "-Wno-unused-result",
+                    "${file}",
+                    "-o",
+                    "${fileDirname}/${fileBasenameNoExtension}"
+                ],
             }
         }
     ],
