@@ -1,13 +1,20 @@
 # CP-VSCode-Setup
-A Competitive Programming setup using Visual Studio Code for C++ users in Windows and Ubuntu.
+A Competitive Programming setup using VSCode for C++ users in Windows and Ubuntu with Debugging support.
+
+[Installation video for Windows on Youtube](https://youtu.be/qzEWDVXknzg)
+
+[Installation video for Ubuntu on Youtube](https://youtu.be/HNeDI7Ijbfc)
 
 ## **Features**
-1) Supports VSCode Debugging Features. Hover over variables to see values, print any object in Debug Console.
-1) Automatic input-output redirection to text files.
-1) Included script to reset all code files.
-1) Easy setup.
+1) VSCode ready to use out of the box (Only windows users need to correct MinGW installation path).
+1) Run `.\windows-reset.bat` in Windows or `./ubuntu-reset.sh` in Ubuntu to reset the `Current` Folder.
+1) All `.cpp` files automatically take input from `input.txt` and output to `output.txt` in the same folder. No need for complicated `ifdef`s.
+1) Leverage powerful features of VSCode:
+   * Step Through Debugging (Execute the code line by line, Hover over variables to get values)
+   * Debug Console (View any object i.e. map, set, vector or any complex object)
+   * Zen Mode (Utilize your screen to the fullest)
 
-![Setup Image](https://user-images.githubusercontent.com/37595244/96286373-2ef39500-0fd8-11eb-883e-363dea77a942.png)
+![Setup Image](https://user-images.githubusercontent.com/37595244/96337963-6f224880-10a8-11eb-8750-6a1974417903.png)
 
 ## **Prerequisites**
 
@@ -60,3 +67,6 @@ Your MinGW package version may be different. In this case, you should update the
 1) Press `F5` to run any `.cpp` file. The file will automatically take input from `input.txt` and write output to `output.txt`
 
 Happy Coding!
+
+## Issues and Suggestions
+Please create a [Github Issue](https://guides.github.com/features/issues/) should you come across an Issue or have a suggestion. I will be happy to resolve it at the earliest.
