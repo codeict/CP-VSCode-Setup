@@ -31,10 +31,12 @@ You are good to go!
     ```bash
     sudo apt-get update
     sudo apt-get install g++
+    sudo apt-get install gdb
     ```
     * Check Installation
     ```bash
     g++ --version
+    gdb --version
     ```
 
 You are good to go!
