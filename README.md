@@ -44,7 +44,7 @@ You are good to go!
 ## Installation
 1) Download this repository and extract folder `CP-VSCODE-SETUP`.
 1) Open VSCode. Click on `File->Open Folder->CP-VSCODE-SETUP`
-1) Open a Terminal by clicking on `Terminal->New Terminal` or press `Ctrl+Alt+T`
+1) Open a Terminal by clicking on `Terminal->New Terminal` or press `` Ctrl+` ``
 1) You can always create a `Current` Folder from terminal by
     * Windows
     ```bash
