@@ -1,3 +1,38 @@
+BIT(Fenwick Tree):
+------------------------------------------------------------------------------
+struct FenwickTree {
+    vector<int> bit;
+    int n;
+
+    FenwickTree(int n) {
+        this->n = n;
+        bit.assign(n, 0);
+    }
+
+    FenwickTree(vector<int> a) : FenwickTree(a.size()) {
+        for (size_t i = 0; i < a.size(); i++)
+            add(i, a[i]);
+    }
+
+    int sum(int r) {
+        int ret = 0;
+        for (; r >= 0; r = (r & (r + 1)) - 1)
+            ret += bit[r];
+        return ret;
+    }
+
+    int sum(int l, int r) {
+        return sum(r) - sum(l - 1);
+    }
+
+    void add(int idx, int delta) {
+        for (; idx < n; idx = idx | (idx + 1))
+            bit[idx] += delta;
+    }
+};
+------------------------------------------------------------------------------
+
+
 DSU :
 ------------------------------------------------------------------------------
 int par[M];
@@ -24,7 +59,7 @@ void pre(int n){
 }
 ------------------------------------------------------------------------------
 
-KMP Prefix Function
+KMP Prefix Function:
 ------------------------------------------------------------------------------
 vector<int> prefix_function(string s) {
     int n = (int)s.length();
@@ -130,20 +165,90 @@ void Manacher(string &s){
 
 Modular Arithmetic:
 ------------------------------------------------------------------------------
-int madd (int a, int b){
+int madd (ll a, ll b){
+    a = a%mod, b = b%mod;
 	return (0ll + a + b)%mod;
 }
-int msub (int a, int b){
+int msub (ll a, ll b){
+    a = a%mod, b = b%mod;
 	return (0ll + a - b + mod)%mod;
 }
-int mmul (int a, int b){
+int mmul (ll a, ll b){
+    a = a%mod, b = b%mod;
 	return (1ll * a * b)%mod;
 }
-int minv (int a){
+int minv (ll a){
+    a = a%mod;
 	return powe(a, mod-2);
 }
-int mdiv (int a, int b){
+int mdiv (ll a, ll b){
 	return mmul(a, minv(b));
+}
+
+int fac[M];
+
+int ncr(int n, int r){
+    if (r < 0 || n < 0 || r > n)
+        return 0;
+    return mdiv(fac[n], mmul(fac[r], fac[n-r]));
+}
+
+void pre(){
+    fac[0] = 1;
+    for (int i = 1; i < M; i ++){
+        fac[i] = mmul(i, fac[i-1]);
+    }
+}
+------------------------------------------------------------------------------
+
+MOs Algorithm:
+------------------------------------------------------------------------------
+struct Query {
+    int L, R, idx;
+    bool operator <(Query other) const {
+        return make_pair(L / K, R) < make_pair(other.L / K, other.R);
+    }
+};
+ 
+void add(int idx) {
+    int temp = freq[A[idx]];
+    answer += (2 * temp + 1) * A[idx];
+    freq[A[idx]]++;
+}
+ 
+void remove(int idx) {
+    int temp = freq[A[idx]];
+    answer -= (2 * temp - 1) * A[idx];
+    freq[A[idx]]--;
+}
+ 
+vector<int> MO_S_Algorithm(vector<Query> queries) {
+    int n = queries.size();
+    vector<int> answers(n);
+ 
+    sort(queries.begin(), queries.end());
+ 
+    int cur_L = 1, cur_R = 0;
+    for(Query Q : queries) {
+        while(cur_L > Q.L) {
+            cur_L--;
+            add(cur_L);
+        }
+        while(cur_R < Q.R) {
+            cur_R++;
+            add(cur_R);
+        }
+        while(cur_L < Q.L) {
+            remove(cur_L);
+            cur_L++;
+        }
+        while(cur_R > Q.R) {
+            remove(cur_R);
+            cur_R--;
+        }
+        answers[Q.idx] = answer;
+    }
+    return answers;
 }
 ------------------------------------------------------------------------------
 
@@ -162,6 +267,11 @@ void seive(){
 		}
 	}
 }
+------------------------------------------------------------------------------
+
+Random Number Generation
+------------------------------------------------------------------------------
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 ------------------------------------------------------------------------------
 
 Segment Tree with Lazy Propagation (max value) :
